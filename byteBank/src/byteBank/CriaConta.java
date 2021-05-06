@@ -28,6 +28,7 @@ public class CriaConta {
 		System.out.println(terceiraConta.titular);
 		*/
 	
+		/*
 		Conta conta = new Conta();
 		conta.saldo = 300;
 		conta.deposita(500);
@@ -37,6 +38,21 @@ public class CriaConta {
 		boolean saqueok = conta.saca(500);
 		System.out.println(saqueok);
 		System.out.println(conta.saldo);
+		
+		Conta conta = new Conta();
+		conta.saldo = 300;
+		conta.deposita(500);
+		*/
+		
+		Conta contaMatheus = new Conta();
+		contaMatheus.deposita(1000);
+		
+		Conta contaLot = new Conta();
+		
+		contaMatheus.transfere(550, contaLot);
+		System.out.println("---------//------------");
+		System.out.println(contaLot.saldo);
+		
 	}
 
 }

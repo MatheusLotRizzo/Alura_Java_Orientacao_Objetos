@@ -20,6 +20,19 @@ public class Conta {
 		}
 	}
 	
+	public boolean transfere(double valor, Conta destino) {
+		if(valor <= this.saldo) {
+			this.saldo -= valor;
+			destino.deposita(valor);
+			System.out.println("Transferido com sucesso o valor de R$ "+valor);
+			System.out.println("Seu saldo é de R$ "+this.saldo);
+			return true;
+		}else {
+			System.out.println("Saldo insuficiente.");
+			System.out.println("Seu saldo é de R$ "+this.saldo);
+			return false;
+		}
+	}
 }
 
 
