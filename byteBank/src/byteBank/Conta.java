@@ -1,10 +1,34 @@
 package byteBank;
 
 public class Conta {
-	double saldo;
-	int agencia;
-	int numConta;
-	Cliente titular;
+	private double saldo;
+	private int agencia;
+	private int numConta;
+	private Cliente titular;
+	
+	public double getSaldo() {
+		return this.saldo;
+	}
+	
+	public int getAgencia() {
+		return this.agencia;
+	}
+	
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+	
+	public int getNumConta() {
+		return this.numConta;
+	}
+	
+	public void setNumConta(int numConta) {
+		this.numConta = numConta;
+	}
+	
+	public Cliente getTitular() {
+		return this.titular;
+	}
 	
 	public void deposita(double valor){
 		this.saldo+=valor; 
@@ -35,5 +59,4 @@ public class Conta {
 		}
 	}
 }
-
 

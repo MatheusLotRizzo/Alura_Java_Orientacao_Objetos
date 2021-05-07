@@ -56,7 +56,7 @@ public class CriaConta {
 		*/
 		
 		//Ligando conta ao cliente
-		
+		/*
 		Cliente matheus = new Cliente();
 		matheus.nome="Matheus Lot Rizzo";
 		matheus.cpf="222.222.222-22";
@@ -67,11 +67,22 @@ public class CriaConta {
 		
 		contaMatheus.titular = matheus;
 		System.out.println(contaMatheus.titular.nome);
+		System.out.println(contaMatheus.getSaldo());
 		
 		Conta contaLot = new Conta();
 		contaLot.titular = new Cliente();
 		contaLot.titular.nome = "LotRz";
 		System.out.println(contaLot.titular.nome);
+		*/
+		
+		//usando getters e setters
+		
+		Conta conta = new Conta();
+		conta.setAgencia(1337);
+		conta.setNumConta(9966);
+		System.out.println(conta.getAgencia());
+		System.out.println(conta.getNumConta());
+		
 			
 	}
 
