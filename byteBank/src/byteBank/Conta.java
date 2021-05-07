@@ -3,7 +3,8 @@ package byteBank;
 public class Conta {
 	double saldo;
 	int agencia;
-	String titular;
+	int numConta;
+	Cliente titular;
 	
 	public void deposita(double valor){
 		this.saldo+=valor; 

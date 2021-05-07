@@ -44,6 +44,7 @@ public class CriaConta {
 		conta.deposita(500);
 		*/
 		
+		/*
 		Conta contaMatheus = new Conta();
 		contaMatheus.deposita(1000);
 		
@@ -52,7 +53,26 @@ public class CriaConta {
 		contaMatheus.transfere(550, contaLot);
 		System.out.println("---------//------------");
 		System.out.println(contaLot.saldo);
+		*/
 		
+		//Ligando conta ao cliente
+		
+		Cliente matheus = new Cliente();
+		matheus.nome="Matheus Lot Rizzo";
+		matheus.cpf="222.222.222-22";
+		matheus.profissao="Dev junior";
+		
+		Conta contaMatheus = new Conta();
+		contaMatheus.deposita(100);
+		
+		contaMatheus.titular = matheus;
+		System.out.println(contaMatheus.titular.nome);
+		
+		Conta contaLot = new Conta();
+		contaLot.titular = new Cliente();
+		contaLot.titular.nome = "LotRz";
+		System.out.println(contaLot.titular.nome);
+			
 	}
 
 }
