@@ -5,6 +5,22 @@ public class Conta {
 	private int agencia;
 	private int numConta;
 	private Cliente titular;
+	private static int totalContas;
+	
+	public Conta(int agencia, int numConta) {
+		if(agencia < 0) {
+			System.out.println("Número da agência ou conta inválido");
+			return;
+		}else {
+			this.agencia = agencia;
+			this.numConta = numConta;
+			Conta.totalContas++;
+		}
+	}
+	
+	public static int getTotalContas() {
+		return Conta.totalContas;
+	}
 	
 	public double getSaldo() {
 		return this.saldo;
@@ -15,7 +31,12 @@ public class Conta {
 	}
 	
 	public void setAgencia(int agencia) {
-		this.agencia = agencia;
+		if(agencia < 0) {
+			System.out.println("Número da agencia inválido");
+			return;
+		}else {
+			this.agencia = agencia;
+		}
 	}
 	
 	public int getNumConta() {
@@ -23,7 +44,12 @@ public class Conta {
 	}
 	
 	public void setNumConta(int numConta) {
-		this.numConta = numConta;
+		if(numConta < 0) {
+			System.out.println("Número da conta inválido");
+			return;
+		}else {
+			this.numConta = numConta;
+		}
 	}
 	
 	public Cliente getTitular() {

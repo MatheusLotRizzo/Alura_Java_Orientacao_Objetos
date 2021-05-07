@@ -75,23 +75,26 @@ public class CriaConta {
 		System.out.println(contaLot.titular.nome);
 		*/
 		
-		//usando getters e setters
+		//usando getters e setters e construtor e variavel static 
 		
-		Conta conta = new Conta();
-		conta.setAgencia(1337);
-		conta.setNumConta(9966);
-		System.out.println(conta.getAgencia());
-		System.out.println(conta.getNumConta());
+		Conta conta = new Conta(1337, 9922);
 		
 		Cliente contaLot = new Cliente();
 		contaLot.setNome("Matheus Lot");
 		conta.setTitular(contaLot);
 		
+		Conta conta2 = new Conta(1337, 9923);
+		Conta conta3 = new Conta(1337, 9924);
+		Conta conta4 = new Conta(1337, 9925);
+		
 		System.out.println(conta.getTitular().getNome());
 		
 		conta.getTitular().setProfissao("Dev Junior");
 		System.out.println(conta.getTitular().getProfissao());
-			
+		System.out.println(conta.getAgencia());
+		System.out.println(conta.getNumConta());
+		System.out.println(Conta.getTotalContas());
+				
 	}
 
 }
