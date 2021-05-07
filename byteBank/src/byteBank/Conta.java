@@ -30,6 +30,10 @@ public class Conta {
 		return this.titular;
 	}
 	
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
 	public void deposita(double valor){
 		this.saldo+=valor; 
 	}

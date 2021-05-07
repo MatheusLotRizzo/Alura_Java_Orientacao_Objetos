@@ -83,6 +83,14 @@ public class CriaConta {
 		System.out.println(conta.getAgencia());
 		System.out.println(conta.getNumConta());
 		
+		Cliente contaLot = new Cliente();
+		contaLot.setNome("Matheus Lot");
+		conta.setTitular(contaLot);
+		
+		System.out.println(conta.getTitular().getNome());
+		
+		conta.getTitular().setProfissao("Dev Junior");
+		System.out.println(conta.getTitular().getProfissao());
 			
 	}
 
