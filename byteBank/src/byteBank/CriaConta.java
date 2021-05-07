@@ -1,9 +1,10 @@
+/*
 package byteBank;
 
 public class CriaConta {
-
+	
 	public static void main(String[] args) {
-		/*
+		
 		Conta primeiraConta = new Conta();
 		primeiraConta.saldo = 200;
 		primeiraConta.agencia = 12345;
@@ -26,9 +27,9 @@ public class CriaConta {
 		System.out.println(terceiraConta.saldo);
 		System.out.println(terceiraConta.agencia);
 		System.out.println(terceiraConta.titular);
-		*/
+		
 	
-		/*
+		
 		Conta conta = new Conta();
 		conta.saldo = 300;
 		conta.deposita(500);
@@ -42,9 +43,9 @@ public class CriaConta {
 		Conta conta = new Conta();
 		conta.saldo = 300;
 		conta.deposita(500);
-		*/
 		
-		/*
+		
+		
 		Conta contaMatheus = new Conta();
 		contaMatheus.deposita(1000);
 		
@@ -53,10 +54,10 @@ public class CriaConta {
 		contaMatheus.transfere(550, contaLot);
 		System.out.println("---------//------------");
 		System.out.println(contaLot.saldo);
-		*/
+		
 		
 		//Ligando conta ao cliente
-		/*
+		
 		Cliente matheus = new Cliente();
 		matheus.nome="Matheus Lot Rizzo";
 		matheus.cpf="222.222.222-22";
@@ -73,9 +74,10 @@ public class CriaConta {
 		contaLot.titular = new Cliente();
 		contaLot.titular.nome = "LotRz";
 		System.out.println(contaLot.titular.nome);
-		*/
+		
 		
 		//usando getters e setters e construtor e variavel static 
+		
 		
 		Conta conta = new Conta(1337, 9922);
 		
@@ -94,7 +96,8 @@ public class CriaConta {
 		System.out.println(conta.getAgencia());
 		System.out.println(conta.getNumConta());
 		System.out.println(Conta.getTotalContas());
-				
+			
 	}
 
 }
+*/
