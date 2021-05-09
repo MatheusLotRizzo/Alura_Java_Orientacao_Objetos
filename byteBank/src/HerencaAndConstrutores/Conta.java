@@ -1,7 +1,7 @@
 package HerencaAndConstrutores;
 
-public class Conta {
-	private double saldo;
+public abstract class Conta {
+	protected double saldo;
 	private int agencia;
 	private int numConta;
 	private Cliente titular;
@@ -60,9 +60,7 @@ public class Conta {
 		this.titular = titular;
 	}
 	
-	public void deposita(double valor){
-		this.saldo+=valor; 
-	}
+	public abstract void deposita(double valor);
 	
 	public boolean saca(double valor) {
 		if(valor <= this.saldo) {

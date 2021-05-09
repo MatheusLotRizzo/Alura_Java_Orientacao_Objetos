@@ -30,18 +30,12 @@ public class TesteFuncionario {
 		Gerente g1 = new Gerente();
 		g1.setSalario(4000);
 		
-		Funcionario f = new Funcionario();
-		f.setSalario(2000);
-		
 		EditorVideo ev = new EditorVideo();
 		ev.setSalario(2500);
 		
         ControleBonificacao controle = new ControleBonificacao();
         
         controle.registra(g1);
-		System.out.println(controle.getSoma());
-		
-		controle.registra(f);
 		System.out.println(controle.getSoma());
 		
 		controle.registra(ev);

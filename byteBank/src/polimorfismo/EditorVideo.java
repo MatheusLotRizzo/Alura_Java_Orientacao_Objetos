@@ -3,7 +3,7 @@ package polimorfismo;
 public class EditorVideo extends Funcionario {
 	
 	public double getBonificacao() {
-		return super.getBonicacao() + 100;
+		return super.getSalario() + 100;
 	}
 	
 	public double getBonicacao() {
