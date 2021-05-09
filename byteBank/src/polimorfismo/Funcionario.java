@@ -10,6 +10,7 @@ public class Funcionario {
 	}
 	
 	public double getBonicacao() {
+		System.out.println("Chamou bonificação Normal");
 		return this.salario * 0.1;
 	}
 	
