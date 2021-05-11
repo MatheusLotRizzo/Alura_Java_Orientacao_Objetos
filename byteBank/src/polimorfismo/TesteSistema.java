@@ -17,5 +17,4 @@ public class TesteSistema {
 		si.autentica(adm);
 		si.autentica(cl);
 	} 
-
 }

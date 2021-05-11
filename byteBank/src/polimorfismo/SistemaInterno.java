@@ -12,5 +12,4 @@ public class SistemaInterno {
 			System.out.println("Não pode entrar no sistema");
 		}
 	}
-	
 }
