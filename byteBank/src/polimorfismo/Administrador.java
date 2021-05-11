@@ -1,13 +1,13 @@
 package polimorfismo;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	private String senha;
 	
+	@Override
 	public double getBonicacao() {
-		System.out.println("Chamou bonificação Gerente");
-		return super.getSalario() * 2;
-	}
-
+		return 50;
+	}	
+	
 	@Override
 	public void setSenha(String senha) {
 		this.senha = senha;
@@ -21,6 +21,5 @@ public class Gerente extends Funcionario implements Autenticavel {
 			return false;
 		}
 	}
-	
 	
 }
