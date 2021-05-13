@@ -13,9 +13,15 @@ public class Fluxo {
         
         try {
             metodo2();
-        }catch(ArithmeticException ex) {
-        	System.out.println("Exceção aritmetica");
-        }
+        }catch(ArithmeticException | NullPointerException ex) {
+        	String msg = ex.getMessage();
+        	System.out.println("Exceção"+msg);
+        	ex.printStackTrace();
+        }/*catch(NullPointerException ex) {
+        	ex.printStackTrace();
+        }*/catch (Exception ex) {
+			
+		}
         
         System.out.println("Fim do metodo1");
     }
@@ -24,7 +30,9 @@ public class Fluxo {
         System.out.println("Ini do metodo2");
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
-            int a = i/0;      
+            //int a = i/0;
+            Conta c = null;
+            c.deposita();
         }
         System.out.println("Fim do metodo2");
     }
