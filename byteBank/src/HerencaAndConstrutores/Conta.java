@@ -1,5 +1,7 @@
 package HerencaAndConstrutores;
 
+import javax.sql.rowset.spi.TransactionalWriter;
+
 public abstract class Conta {
 	protected double saldo;
 	private int agencia;
@@ -62,29 +64,23 @@ public abstract class Conta {
 	
 	public abstract void deposita(double valor);
 	
-	public boolean saca(double valor) {
-		if(valor <= this.saldo) {
-			this.saldo -= valor;
-			System.out.println("Retire o Money");
-			return true;
-		}else {
-			System.out.println("Valor Indiponível");
-			return false;
+	public void saca(double valor) throws SaldoInsuficienteException {
+		if(this.saldo < valor) {
+			throw new SaldoInsuficienteException("Saldo Insuficiente. "
+					+ "Saldo Atual: " + this.saldo 
+					+ " Valor tentado reitrar: " + valor);
 		}
+		
+		this.saldo -= valor;
+		System.out.println("Retire o Money");
+		System.out.println("Seu saldo é de R$ "+this.saldo);
 	}
 	
-	public boolean transfere(double valor, Conta destino) {
-		if(valor <= this.saldo) {
-			this.saldo -= valor;
-			destino.deposita(valor);
-			System.out.println("Transferido com sucesso o valor de R$ "+valor);
-			System.out.println("Seu saldo é de R$ "+this.saldo);
-			return true;
-		}else {
-			System.out.println("Saldo insuficiente.");
-			System.out.println("Seu saldo é de R$ "+this.saldo);
-			return false;
-		}
+	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
+		this.saca(valor);	
+		destino.deposita(valor);
+		System.out.println("Transferido com sucesso o valor de R$ "+valor);
+		System.out.println("Seu saldo é de R$ "+this.saldo);
 	}
 }
 

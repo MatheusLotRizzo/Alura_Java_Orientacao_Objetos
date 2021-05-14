@@ -17,6 +17,9 @@ public class Fluxo {
         	String msg = ex.getMessage();
         	System.out.println("Exception "+msg);
         	ex.printStackTrace();
+        }catch(Exception e) { //pega qualquer exceção
+        	String msg = e.getMessage();
+        	System.out.println("Exception "+msg);
         }
         
         System.out.println("Fim do metodo1");
