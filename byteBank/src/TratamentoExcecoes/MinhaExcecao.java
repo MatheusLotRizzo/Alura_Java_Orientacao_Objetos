@@ -1,6 +1,6 @@
 package TratamentoExcecoes;
 
-public class MinhaExcecao extends RuntimeException {
+public class MinhaExcecao extends Exception {
 	public MinhaExcecao() {}	
 	
 	public MinhaExcecao(String msg) {
