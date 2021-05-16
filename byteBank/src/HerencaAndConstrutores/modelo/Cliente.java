@@ -1,4 +1,4 @@
-package HerencaAndConstrutores;
+package HerencaAndConstrutores.modelo;
 
 public class Cliente {
 	private String nome;

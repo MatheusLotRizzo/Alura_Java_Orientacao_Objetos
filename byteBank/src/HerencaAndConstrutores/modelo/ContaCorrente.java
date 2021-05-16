@@ -1,4 +1,4 @@
-package HerencaAndConstrutores;
+package HerencaAndConstrutores.modelo;
 
 public class ContaCorrente extends Conta implements Tributavel {
 	public ContaCorrente(int agencia, int numConta) {

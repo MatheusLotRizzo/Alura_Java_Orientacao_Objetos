@@ -1,4 +1,4 @@
-package HerencaAndConstrutores;
+package HerencaAndConstrutores.modelo;
 
 import javax.sql.rowset.spi.TransactionalWriter;
 

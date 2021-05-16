@@ -1,4 +1,4 @@
-package HerencaAndConstrutores;
+package HerencaAndConstrutores.modelo;
 
 public interface Tributavel {
 	

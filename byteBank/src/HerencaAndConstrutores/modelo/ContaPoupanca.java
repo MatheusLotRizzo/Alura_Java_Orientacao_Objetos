@@ -1,4 +1,4 @@
-package HerencaAndConstrutores;
+package HerencaAndConstrutores.modelo;
 
 public class ContaPoupanca extends Conta {
 	public ContaPoupanca(int agencia, int numConta) {
