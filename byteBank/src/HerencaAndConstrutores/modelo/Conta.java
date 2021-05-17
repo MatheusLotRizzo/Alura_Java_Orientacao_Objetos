@@ -9,6 +9,11 @@ public abstract class Conta {
 	private Cliente titular;
 	private static int totalContas;
 	
+	@Override
+	public String toString() {
+		return "Número: "+this.getNumConta()+" Agencia: "+this.agencia;
+	}
+	
 	public Conta(int agencia, int numConta) {
 		if(agencia < 0) {
 			System.out.println("Número da agência ou conta inválido");
