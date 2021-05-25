@@ -3,7 +3,7 @@ package ClassesObjectAndString;
 import HerencaAndConstrutores.modelo.ContaCorrente;
 import HerencaAndConstrutores.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteObject {
 
 	public static void main(String[] args) {
 		ContaCorrente cc = new ContaCorrente(22, 13);
