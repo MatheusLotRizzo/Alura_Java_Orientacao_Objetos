@@ -1,4 +1,4 @@
-package JavaUtil;
+package JavaUtil.Arrays;
 
 public class TesteArrayPrimitivos {
 

@@ -1,4 +1,4 @@
-package JavaUtil;
+package JavaUtil.Arrays;
 
 import HerencaAndConstrutores.modelo.Cliente;
 import HerencaAndConstrutores.modelo.Conta;
