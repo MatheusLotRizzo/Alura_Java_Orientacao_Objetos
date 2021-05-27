@@ -87,5 +87,21 @@ public abstract class Conta {
 		System.out.println("Transferido com sucesso o valor de R$ "+valor);
 		System.out.println("Seu saldo é de R$ "+this.saldo);
 	}
+	
+	@Override
+	public boolean equals(Object ref) {
+		
+		Conta outra = (Conta) ref;
+		
+		if(this.agencia != outra.agencia) {
+			return false;
+		}
+		
+		if(this.numConta != outra.numConta) {
+			return false;
+		}
+		
+		return true;
+	}
 }
 
