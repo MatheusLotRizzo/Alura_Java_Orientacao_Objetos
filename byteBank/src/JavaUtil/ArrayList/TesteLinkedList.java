@@ -33,8 +33,6 @@ public class TesteLinkedList {
 		System.out.println("Contas:");
 		for(Conta conta : lista) {
 			System.out.println(conta);
-		}
-				
+		}			
 	}
-
 }
