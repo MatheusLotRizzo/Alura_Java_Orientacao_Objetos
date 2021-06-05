@@ -3,13 +3,14 @@ package JavaUtil.ArrayList;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 import HerencaAndConstrutores.modelo.Cliente;
 import HerencaAndConstrutores.modelo.Conta;
 import HerencaAndConstrutores.modelo.ContaCorrente;
 import HerencaAndConstrutores.modelo.ContaPoupanca;
 
-public class ClassesAnonimasAndLambdas {
+public class Lambdas {
 
 	public static void main(String[] args) {
 		Conta cc1 = new ContaCorrente(22, 33);
@@ -49,40 +50,32 @@ public class ClassesAnonimasAndLambdas {
 			System.out.println(conta + " Titular: " + conta.getTitular().getNome());
 		}
 
-		// Classe Anonima, ordenando por número
-		lista.sort(new Comparator<Conta>() {
-			@Override
-			public int compare(Conta c1, Conta c2) {
-				return Integer.compare(c1.getNumConta(), c2.getNumConta());
-			}
-		});
+		// Lambda em vez de Classe Anonima, ordenando por número
+		/*
+		lista.sort((Conta c1, Conta c2) -> {
+			return Integer.compare(c1.getNumConta(), c2.getNumConta());
+		});*/
+		
+		System.out.println("");
+		System.out.println("Depois de Ordenar Por nome Nº de conta");
+		System.out.println("");
+		
+		lista.sort( (c1, c2) -> Integer.compare(c1.getNumConta(), c2.getNumConta()) );
+		
+		lista.forEach( (conta) -> System.out.println(conta + " Titular: " + conta.getTitular().getNome()) );
 
-		// Outro exemplod e classe anonima, ordenando pelo numero
-		Comparator<Conta> comp = new Comparator<Conta>() {
-			@Override
-			public int compare(Conta c1, Conta c2) {
-				String nomec1 = c1.getTitular().getNome();
-				String nomec2 = c2.getTitular().getNome();
-				return nomec1.compareTo(nomec2);
-			}
+		System.out.println("");
+		System.out.println("Depois de Ordenar Por nome");
+		System.out.println("");
+		
+		// Lambda em vez de Classe Anonima, ordenando pelo numero
+		Comparator<Conta> comp = (Conta c1, Conta c2) -> {
+			String nomec1 = c1.getTitular().getNome();
+			String nomec2 = c2.getTitular().getNome();
+			return nomec1.compareTo(nomec2);
 		};
-
-		System.out.println("");
-		System.out.println("Depois de Ordenar");
-		System.out.println("");
-
-		for (Conta conta : lista) {
-			System.out.println(conta + " Titular: " + conta.getTitular().getNome());
-		}
-	}
-}
-
-class OrdenaTitular2 implements Comparator<Conta> {
-
-	@Override
-	public int compare(Conta c1, Conta c2) {
-		String nomec1 = c1.getTitular().getNome();
-		String nomec2 = c2.getTitular().getNome();
-		return nomec1.compareTo(nomec2);
+		
+		lista.sort(comp);
+		lista.forEach( (conta) -> System.out.println(conta + " Titular: " + conta.getTitular().getNome()) );
 	}
 }
